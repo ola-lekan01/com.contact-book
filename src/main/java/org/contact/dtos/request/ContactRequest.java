@@ -1,8 +1,10 @@
 package org.contact.dtos.request;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.annotation.Id;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,10 +12,12 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @RequiredArgsConstructor
+@Builder
 
 public class ContactRequest {
-    private int id;
 private String firstName;
-private final Set<String> phoneNumber = new HashSet<>();
+@Id
+private int id;
+private Set<String> phoneNumber = new HashSet<>();
 
 }
