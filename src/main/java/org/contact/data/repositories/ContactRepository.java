@@ -1,14 +1,8 @@
 package org.contact.data.repositories;
 
 import org.contact.data.model.Contact;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface ContactRepository {
+public interface ContactRepository extends MongoRepository<Contact, Integer> {
 
-void save(Contact contact);
-void findByName(String name);
-void findByNumber(String phoneNumber);
-void findAll();
-void update(Contact contact);
-void delete(Contact contact);
-void deleteAll(Contact contact);
 }
