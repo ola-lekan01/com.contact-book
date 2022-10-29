@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.annotation.Id;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -14,8 +14,10 @@ import java.util.Set;
 @Builder
 
 public class ContactRequest {
-private String firstName;
-@Id
-private int id;
-private Set<String> phoneNumber = new HashSet<>();
+    private String firstName;
+    private String lastName;
+    private Set<String> phoneNumber = new HashSet<>();
+    private String email;
+    private String address;
+    private LocalDate date;
 }
