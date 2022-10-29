@@ -16,7 +16,8 @@ import java.util.Set;
 @RequiredArgsConstructor
 @Builder
 @Document
-public class ContactModel {
+
+public class Contact {
     @Id
     private String id;
     private String firstName;

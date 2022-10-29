@@ -14,8 +14,8 @@ import java.util.Set;
 public class UpdateContactRequest {
     private String firstName;
     private String lastName;
-    private final Set<String> phoneNumber = new HashSet<>();
+    private Set<String> phoneNumber = new HashSet<>();
     private String email;
     private String address;
-    private LocalDate date;
+    private LocalDate dateOfBirth;
 }
